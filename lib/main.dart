@@ -27,7 +27,7 @@ Future<void> _messageHandler(RemoteMessage message) async {
 
     nm_app.Notification _notification =
         nm_app.Notification.fromRemoteMessage(message);
-    MessagingService().addNotification(userId, _notification);
+    /* MessagingService().addNotification(userId, _notification); */
     LocalNotificationsService().showNotification(
         notification.hashCode, notification.title, notification.body);
   }
@@ -35,6 +35,7 @@ Future<void> _messageHandler(RemoteMessage message) async {
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
   await LocalNotificationsService().init();
   await GeoAccessService.StartListening();
   await Firebase.initializeApp();
