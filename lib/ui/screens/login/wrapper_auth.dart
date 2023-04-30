@@ -10,7 +10,7 @@ class Wrapper extends StatelessWidget {
   Widget build(BuildContext context) {
     final userProvider = Provider.of<UserProvider>(context, listen: false);
     final firebaseUser = Provider.of<User>(context);
-
+    print(firebaseUser);
     if (firebaseUser != null) {
       if (!userProvider.isLoggingIn) userProvider.initUSer();
       return LayoutScreen();

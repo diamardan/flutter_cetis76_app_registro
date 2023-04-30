@@ -1,0 +1,46 @@
+{
+    "project_info": {
+        "project_number": "1015698783853",
+        "project_id": "smart-school-39135",
+        "storage_bucket": "smart-school-39135.appspot.com"
+    },
+    "client": [
+        {
+            "client_info": {
+                "mobilesdk_app_id": "1:1015698783853:android:57e329268e35d6e724c964",
+                "android_client_info": {
+                    "package_name": "com.identaflix.cetis76_app_registro"
+                }
+            },
+            "oauth_client": [
+                {
+                    "client_id": "1015698783853-acugnmf3ack93amsq5tjbcvr1b0012dv.apps.googleusercontent.com",
+                    "client_type": 3
+                }
+            ],
+            "api_key": [
+                {
+                    "current_key": "AIzaSyBDJOO0z9m85TP3ljfdJTQxbJUwVc0CnOU"
+                }
+            ],
+            "services": {
+                "appinvite_service": {
+                    "other_platform_oauth_client": [
+                        {
+                            "client_id": "1015698783853-acugnmf3ack93amsq5tjbcvr1b0012dv.apps.googleusercontent.com",
+                            "client_type": 3
+                        },
+                        {
+                            "client_id": "1015698783853-a173tb0718bn49ctn35ci808j3j3i72b.apps.googleusercontent.com",
+                            "client_type": 2,
+                            "ios_info": {
+                                "bundle_id": "mx.com.infon.cetis32-app-registro"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "configuration_version": "1"
+}

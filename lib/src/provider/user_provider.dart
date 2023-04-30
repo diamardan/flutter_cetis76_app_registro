@@ -17,15 +17,18 @@ class UserProvider with ChangeNotifier {
   initUSer() {
     Future<SharedPreferences> _prefs = SharedPreferences.getInstance();
     _prefs.then((prefs) {
-      if (prefs.containsKey("registration_id")) {
-        String id = prefs.getString("registration_id");
-        String access = prefs.getString("auth_method");
-        print("id:" + id);
+      if (prefs.containsKey('first_run')) {
+        if (prefs.containsKey("registration_id")) {
+          String id = prefs.getString("registration_id");
+          String access = prefs.getString("auth_method");
+          print("id:" + id);
 
-        RegistrationService().get(id).then((registration) {
-          registration.accessMethod = access;
-          if (registration != null) setRegistration(registration);
-        });
+          RegistrationService().get(id).then((registration) {
+            registration.accessMethod = access;
+            if (registration != null) setRegistration(registration);
+          });
+          prefs.setBool('first_run', false);
+        }
       }
     });
   }

@@ -1,6 +1,6 @@
 import UIKit
 import Flutter
-
+import FirebaseCore
 @UIApplicationMain
 @objc class AppDelegate: FlutterAppDelegate {
     
@@ -13,6 +13,7 @@ import Flutter
         // Runs the default Dart entrypoint with a default Flutter route.
         flutterEngine.run()
         // Used to connect plugins (only if you have plugins with iOS platform code).
+        FirebaseApp.configure()
         GeneratedPluginRegistrant.register(with: self.flutterEngine)
 
         return super.application(application, didFinishLaunchingWithOptions: launchOptions)

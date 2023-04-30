@@ -33,6 +33,11 @@ class RegistrationService {
 
     if (result.docs.isNotEmpty) {
       var data = result.docs.first.data();
+      print(data);
+      if (data["idbio"] == null) {
+        print("sin idbio");
+        return null;
+      }
       var registrationMap = {"id": result.docs.first.id, ...data};
       return Registration.fromJson(registrationMap);
     } else

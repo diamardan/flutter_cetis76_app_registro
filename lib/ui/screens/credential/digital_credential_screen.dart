@@ -111,7 +111,7 @@ class _DigitalCredentialScreenState extends State<DigitalCredentialScreen> {
                         fit: BoxFit.cover,
                         alignment: Alignment.topCenter,
                         image: AssetImage(
-                            'assets/img/credencial/reverso2022.png')),
+                            'assets/img/credencial/reverso2023.jpg')),
                   ),
                   child: Column(
                     children: <Widget>[
@@ -249,7 +249,7 @@ class _DigitalCredentialScreenState extends State<DigitalCredentialScreen> {
             image: DecorationImage(
                 fit: BoxFit.cover,
                 alignment: Alignment.topCenter,
-                image: AssetImage('assets/img/credencial/anverso2022.png')),
+                image: AssetImage('assets/img/credencial/anverso2023.jpg')),
           ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.start,

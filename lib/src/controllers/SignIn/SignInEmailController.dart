@@ -14,6 +14,7 @@ class SignInEmailController extends SignInController {
       BuildContext context, String email, String password) async {
     r = await RegistrationService().checkEmail(email);
     if (r is Registration) {
+      print(r);
       String res1 = await registerDeviceWithToken(r);
       if (res1 == "device_registered_success") {
         await persistUserData(r.id, "email");

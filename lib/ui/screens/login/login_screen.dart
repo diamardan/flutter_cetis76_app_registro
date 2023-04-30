@@ -491,7 +491,7 @@ class _LoginScreenState extends State<LoginScreen> {
               TextButton(
                 child: Text('Ok'),
                 onPressed: () async {
-                  await openAppSettings();
+                  //await openAppSettings();
                 },
               )
             ],
