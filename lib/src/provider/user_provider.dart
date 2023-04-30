@@ -1,7 +1,9 @@
 import 'dart:async';
 
+import 'package:cetis76_app_registro/src/data/AuthenticationService.dart';
 import 'package:cetis76_app_registro/src/models/user_model.dart';
 import 'package:cetis76_app_registro/src/data/RegistrationService.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:flutter/widgets.dart';
 //import 'package:cetis76_app_registro/src/utils/log_util.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -17,7 +19,8 @@ class UserProvider with ChangeNotifier {
   initUSer() {
     Future<SharedPreferences> _prefs = SharedPreferences.getInstance();
     _prefs.then((prefs) {
-      if (prefs.containsKey('first_run')) {
+      if (prefs.getBool('first_run') == false) {
+        print("si tengo first_run y es ${prefs.getBool('first_run')}");
         if (prefs.containsKey("registration_id")) {
           String id = prefs.getString("registration_id");
           String access = prefs.getString("auth_method");
@@ -27,8 +30,13 @@ class UserProvider with ChangeNotifier {
             registration.accessMethod = access;
             if (registration != null) setRegistration(registration);
           });
-          prefs.setBool('first_run', false);
         }
+      } else {
+        FlutterSecureStorage secStorage = FlutterSecureStorage();
+        secStorage.deleteAll();
+        AuthenticationService().signOut();
+        print("siiii tengo first_run y es ${prefs.getBool('first_run')}");
+        prefs.setBool('first_run', false);
       }
     });
   }

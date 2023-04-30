@@ -4,11 +4,16 @@ import 'package:cetis76_app_registro/src/models/user_model.dart';
 import 'package:cetis76_app_registro/src/data/AuthenticationService.dart';
 import 'package:cetis76_app_registro/src/data/RegistrationService.dart';
 import 'package:cetis76_app_registro/src/utils/enums.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class AuthSign {
   static RegistrationService registrationService = RegistrationService();
 
   static AuthenticationService authenticationService = AuthenticationService();
+
+  static signOutOnError() async {
+    await AuthenticationService().signOut();
+  }
 
 // * * *  Sign up email and password  * * *
   static signUpWithEmailAndPassword(String email) async {
