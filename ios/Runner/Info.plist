@@ -56,6 +56,12 @@
 	<string>Deseas permitir el acceso a tus contactos</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Permitir el acceso a tu ubicación</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Permitir el acceso a tu ubicación</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Permitir el acceso a tu ubicación</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Permitir el acceso a tu ubicación</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>your usage description here</string>
 	<key>NSMicrophoneUsageDescription </key>
